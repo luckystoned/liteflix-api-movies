@@ -8,7 +8,7 @@ const { PORT } = process.env;
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule);
 
-  const options = new DocumentBuilder().setTitle('Liteflix movies').build();
+  const options = new DocumentBuilder().setTitle('Liteflix API movies').build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('docs', app, document);
 
